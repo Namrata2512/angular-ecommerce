@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row">
+       <div class="col-md-6">
+           <div class="card c1">
+               <div class="text-center">
+                   <h1>Sign up</h1>
+               </div>
+               <form [formGroup]="signupForm" (ngSubmit)="signup()">
+                   <div class="mb-3">
+                       <label for="formGroupExampleInput" class="form-label">Full name</label>
+                       <!-- <input type="text" class="form-control"  formControlName="fullname" id="formGroupExampleInput" placeholder="fullname"> -->
+                       <input type="text" class="form-control" [(ngModel)]="fullname" formControlName="fullname"  name="fullname"  id="formGroupExampleInput" placeholder="fullname"> 
+                       <span class="errormessage"  *ngIf="signupForm.get('fullname')?.errors?.['required ']&& signupForm.get('fullname')?.touched">please enter your fullname</span>
+                     </div>
+                     <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label">Mobile</label>
+                        <!-- <input type="number" class="form-control" formControlName="mobile"  id="formGroupExampleInput" placeholder="Example input placeholder"> -->
+                        <input type="number" formControlName="mobile" [(ngModel)]="mobile" name="mobile" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+                         <span class="errormessage"  *ngIf="signupForm.get('mobile')?.errors?.['required ']&& signupForm.get('mobile')?.touched">please enter valid mobile</span>
+                      </div>
+                      <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label">Email</label>
+                        <!-- <input formControlName="email"  type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder"> -->
+                        <input formControlName="email"  [(ngModel)]="email" name="email" type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+                        <span class="errormessage"  *ngIf="signupForm.get('email')?.errors?.['required ']&& signupForm.get('email')?.touched">please enter valid e</span>
+                      </div>
+                     <div class="mb-3">
+                       <label for="formGroupExampleInput2" class="form-label">Password</label>
+                       <!-- <input formControlName="password" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder"> -->
+                       <input formControlName="password"  [(ngModel)]="password" name="password" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
+                       <span class="errormessage"  *ngIf="signupForm.get('password')?.errors?.['required ']&& signupForm.get('password')?.touched">please enter valid p</span>
+                     </div>
+
+                    
+                     <div class="mb-3">
+                      <label for="formGroupExampleInput2" class="form-label">Select Role</label>
+                     <!-- <input formControlName="role" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">  -->
+                      <input formControlName="role"  [(ngModel)]="role" name="role" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder"> 
+                      <span class="errormessage"  *ngIf="signupForm.get('role')?.errors?.['required ']&& signupForm.get('role')?.touched">please enter valid p</span>
+                    </div>
+                     <button type="submit" class="btn btn-primary ">Sign up</button>
+               </form>
+               <a routerLink="/jsonlogin" class="text-white mt-2">Allready have account?Click to Login!!</a>
+           </div>
+       </div>
+    </div>
+   </div>

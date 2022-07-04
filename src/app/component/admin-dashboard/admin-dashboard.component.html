@@ -1,0 +1,28 @@
+<!-- <p>admin-dashboard works!</p> -->
+<app-header></app-header>
+<div class="container text-center">
+<h3>welcome to Dashboard <span [ngClass]="'admin-username-color'"><i>{{ email_from_local}}{{name_from_local}}</i></span></h3>
+<p>You are logged in as<span [ngClass]="'admin-username-color'"><strong>{{ role_from_local}}</strong></span></p>
+<p>Go to <strong><a routerLink="/products" >shop</a></strong></p>
+<table class="table table-bordered table-striped table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">MOBILE</th>
+                <th scope="col">EMAIL</th>
+                <th scope="col">ADDRESS</th>
+                <th scope="col">PASSWORD</th>
+                <th scope="col">ROLE</th>
+              </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let userdetails of allusers">
+              <th scope="row">{{userdetails.id}}</th>
+              <td>{{userdetails.mobile}}</td>
+              <td>{{userdetails.email}}</td>
+              <td>{{userdetails.address}}</td>
+              <td>{{userdetails.pass}}</td>
+              <td>{{userdetails.role}}</td>
+        </tr>
+    </table>
+</div>

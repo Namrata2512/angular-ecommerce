@@ -1,0 +1,20 @@
+
+.errormessage{
+    color:rgb(0, 255, 38);
+    font-weight: 800;
+}
+input.ng-invalid.ng-touched{
+    border-bottom:3px solid red;
+}
+
+
+input.ng-valid.ng-touched{
+    border-bottom:3px solid green;
+}
+textarea.ng-valid.ng-touched{
+    border-bottom:3px solid  green;
+}
+
+textarea.ng-invalid.ng-touched{
+    border-bottom: 3px solid rgb(98, 0, 255);
+}

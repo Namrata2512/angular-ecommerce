@@ -1,0 +1,29 @@
+<!-- <p>product works!</p> -->
+<app-header></app-header>
+<div class="card-top container-fluid">
+    <div class="d-flex col-lg-12 col-sm-12">
+        <div class="item m-2" routerLink="/products" (click)=" filter('')">All products</div>
+        <div class="item m-2" routerLink="/products"  (click)=" filter('electronics')">Electronics</div>
+        <div class="item m-2"routerLink="/products"  (click)=" filter('fashion')">Fashion</div>
+        <div class="item m-2"routerLink="/products"  (click)=" filter('jewelery')">Jewelry</div>
+       
+
+
+    </div>
+</div>
+<div class="container col-lg-12 col-sm-12">
+    <div class="row">
+        <ng-container *ngFor="let item of filterCategory | filter:searchKey:'title'">
+            <div class="card col-md-3">
+                <img src="{{item.image}}" alt="">
+                <h5 class="item-title">{{item.title | uppercase}}</h5>
+                <p class="item-title">{{item.description}}</p>
+                <p><strong>price</strong>{{item.price}}</p>
+                <button class="btn btn-primary add-to-cart" (click)=" addtoCart(item)">Add to cart</button>
+                
+               
+                        </div>
+        </ng-container>
+       
+    </div>
+</div>

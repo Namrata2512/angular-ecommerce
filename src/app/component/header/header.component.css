@@ -1,0 +1,18 @@
+.logo-text{
+    font-size: 30px;
+}
+
+div.navbar{
+    background-color: #131921;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+.cart-btn{
+    background-color: #ffa41c;
+    color: #131921;
+    font-weight: 700;
+    
+}
+.form-control{
+    width: 500px;
+}

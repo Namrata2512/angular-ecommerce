@@ -1,0 +1,56 @@
+.item-title{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100ch;
+}
+.card img{
+    width: 200px;
+    height: 200px;
+    margin-bottom:15px ;
+    transition: 0.3s ease-in-out;
+}
+.card img:hover{
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+}
+.card{
+    padding: 20px;
+   margin: 30px;
+   cursor: pointer;
+  
+}
+.card-top{
+    background-color: #232f3e;
+    color: #ffffff;
+    
+}
+.add-to-cart{
+    background-color: #131921;
+   
+}
+.add-to-cart:hover{
+    color: #131921;
+    background-color: #ffa41c;
+    border: #ffd814;
+    font-weight: bold;
+}
+.item{
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 0;
+    padding: 10px;
+}
+.item:hover{
+    border: 1px solid #ffffff;
+}
+.img-bg{
+    height: 60px;
+    width: 60px;
+    padding: 20px;
+    background-color: blueviolet;
+    border-radius: 20%;
+    z-index: 1;
+    position: absolute;
+}

@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css";
+.c1{
+ 
+    border:none;
+    padding: 40px;
+    position:absolute;
+    top:20%;
+    background: linear-gradient(to top left, #9966ff 0%, #ff99cc 100%);
+    margin: auto;
+    transform: translate(50%, -10%);
+
+}
+
+.errormessage{
+    color:rgb(0, 255, 4);
+    font-weight: 900;
+}
+.c2{
+    background: linear-gradient(to top, #6699ff 11%, #666699 100%);
+}
+.login-btn,.regi-btn{
+    background-color: #131921;
+    width: 100px;
+    color: #ffffff;
+    margin-top: 40px !important;
+}
+.login-btn:hover, .regi-btn:hover{
+    color: #131921;
+    background-color: #ffa41c;
+    border: #ffd814;
+    font-weight: bold;}
+@media(min-width:1024px) {
+    .card{
+        width: 500px;
+    } 
+}

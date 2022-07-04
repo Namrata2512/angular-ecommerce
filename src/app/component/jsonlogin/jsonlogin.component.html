@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+       <div class="col-md-6">
+           <div class="card c1">
+               <div class="text-center">
+                   <h1>log in</h1>
+               </div>
+               <form [formGroup]="loginForm" (ngSubmit)="login()">
+                   <div class="mb-3">
+                       <label for="formGroupExampleInput" class="form-label">Email address</label>
+                       <input type="text" formControlName="email" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+                     </div>
+                     <div class="mb-3">
+                       <label for="formGroupExampleInput2" class="form-label">password</label>
+                       <input type="text" formControlName="password" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
+                     </div>
+                     <button type="submit" class="btn btn-primary ">Log in</button>
+               </form>
+               <a routerLink="/jsonsignup" class="text-white mt-2">New user?Click to signUp!!</a>
+           </div>
+       </div>
+    </div>
+   </div>

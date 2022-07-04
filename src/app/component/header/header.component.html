@@ -1,0 +1,32 @@
+<!-- <p>header works!</p> -->
+<header>
+    <div class="navbar  shadow-sm">
+        <div class="navbar-brand">
+       <h3> <strong class="text-white logo-text">Ecommerce Application
+        </strong></h3>
+       
+    </div>
+    <a routerLink="/admin-dashboard" class="text-white" >Dashboard</a>
+    <div class="form-group">
+       
+        <input type="text" placeholder="search product"  class="form-control mt-3" [(ngModel)]="SearchTerm" (keyup)="search($event)">
+    </div>
+    <!-- <h1 class="text-white">DATE: {{Date1}}</h1> -->
+   
+    <strong class="text-white">Date:  {{localDate}}</strong>
+<button routerLink="/cart" class="cart-btn btn">cart
+    <div class="badge bg-danger">
+       <!-- {{totalItem}}  -->
+       <!-- {{cartvalue_from_local}}  -->
+       {{cartvalue_from_local}}
+    </div>
+</button>
+<!-- <button>{{cartvalue_from_local}}</button> -->
+
+<!-- <h1 class="text-white">{{msgfromservice}}</h1> -->
+<span class="text-white">{{ email_from_local}}</span>
+<span class="text-white">{{ name_from_local}}</span>
+<button class="btn btn-danger" (click)="logout()">Logout</button>
+<!-- <h1>{{id}}</h1> -->
+</div>
+</header>
